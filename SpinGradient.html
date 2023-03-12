@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPINNIN' GRADIENT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="app">
+        <section class="mainsect" id="mainsect">
+            <div class="logo">
+                <a class="header__logo-link">xaocxayc</a>
+            </div>        
+            <header class="header">                    
+                <div class="header__menu">
+                    <a href="#" class="header__menu-link">все работы</a>
+                    <a href="#" class="header__menu-link">веб</a>
+                    <a href="#" class="header__menu-link">лого</a>
+                    <a href="#" class="header__menu-link">нейминг</a>
+                </div>
+            </header>
+    
+            <div class="owl-carousel owl-carousel_mine">
+                <div class="item" id="item1"><img src="img/kfc_food_PNG30.png" alt="safg" style="width: auto;"></div>
+                <div class="item" id="item2"><img src="img/kfc_food_PNG60.png" alt="safg" style="width: auto;"></div>
+                <div class="item" id="item3"><img src="img/kfc_food_PNG65.png" alt="safg" style="width: auto;"></div>            
+            </div>
+    
+    
+    
+    
+    
+            <footer class="footer" id="footer">
+                <a href="#" class="footer__menu-link">facebook</a>
+                <a href="#" class="footer__menu-link">instagram</a>
+                <a href="#" class="footer__menu-link">behance</a>
+            </footer>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script> 
+
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+            })
+        });
+
+        window.onload = function(){
+            var allContent=document.getElementById('mainsect');
+            var footer=document.getElementById('footer');
+            var full=allContent.height+footer.height;
+            var boolivaya=full != screen.height;            
+            if (boolivaya){                
+                footer.className += " fixed";  
+            }
+            else {    
+                footer.className -= " fixed";
+            }   
+        }
+
+
+
+
+
+
+        
+    </script> 
+</body>
+</html>
